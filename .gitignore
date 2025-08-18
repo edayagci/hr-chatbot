@@ -1,0 +1,16 @@
+hr-chatbot-ui.zip
+node_modules/
+.venv/
+
+.DS_Store
+
+*.zip
+
+
+__pycache__/
+*.pyc
+hr-chatbot-backend/.venv/
+
+hr-chatbot-ui/node_modules/
+hr-chatbot-ui/.next/
+hr-chatbot-ui/.env.local
