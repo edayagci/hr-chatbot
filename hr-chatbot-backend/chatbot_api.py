@@ -17,10 +17,17 @@ df = pd.read_pickle("./embedded_df.pkl")
 # === FastAPI setup ===
 app = FastAPI()
 
+origins = [
+    "http://localhost:3000",
+    "http://localhost:3002",
+    "https://hr-chatbot-ui.onrender.com",  # frontend Render domain
+]
+
+
 # === CORS for frontend communication ===
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.getenv("ALLOW_ORIGIN", "http://localhost:3000")],  # local UI for now
+    allow_origins=origins,  # local UI for now
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
