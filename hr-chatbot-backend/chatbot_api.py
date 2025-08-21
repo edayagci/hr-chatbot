@@ -20,8 +20,10 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "http://localhost:3002",
-    "https://hr-chatbot-ui.onrender.com",  # frontend Render domain
+    "https://hr-chatbot-ui.vercel.app",   # frontend
+    "https://hr-chatbot-1-1sq3.onrender.com",  # backend itself (sometimes needed)
 ]
+
 
 
 # === CORS for frontend communication ===
